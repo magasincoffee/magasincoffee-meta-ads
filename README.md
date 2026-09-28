@@ -1,11 +1,17 @@
-# Magasin Coffee Meta Ads
+# Magasin Brands Meta Ads
 
-This repository is the strategic Source of Truth for Magasin Coffee advertising on Meta.
+This repository is the strategic Source of Truth for Meta advertising across two brands:
+
+1. **Magasin Coffee**
+2. **Magasin Cup**
+
+Both brands currently operate through the same connected Meta Ads account, but their strategy, campaign intent, creative, measurement, and performance must be analyzed separately.
 
 ## Purpose
 
 The repository stores:
-- advertising strategy and operating rules;
+- shared advertising governance and operating rules;
+- brand-specific strategy and current state;
 - campaign plans and lifecycle records;
 - experiment hypotheses and results;
 - performance reviews;
@@ -13,7 +19,7 @@ The repository stores:
 - decision history;
 - instructions for ChatGPT to reload project context.
 
-Live advertising metrics remain in Meta Ads. GitHub stores the durable reasoning, decisions, plans, and review history.
+Live advertising metrics remain in Meta Ads. GitHub stores durable reasoning, decisions, plans, and review history.
 
 ## Read order
 
@@ -21,11 +27,14 @@ When starting or resuming work, read in this order:
 
 1. `SOURCE_OF_TRUTH.md`
 2. `CURRENT_STATE.md`
-3. Relevant files under `strategy/`
-4. Relevant active campaign under `campaigns/active/`
-5. Relevant experiment under `experiments/`
-6. Recent entries in `decisions/decision-log.md`
-7. Recent performance review under `performance/`
+3. `brands/README.md`
+4. The relevant brand files under `brands/<brand>/`
+5. Relevant shared files under `strategy/`
+6. Relevant active/planned campaign files
+7. Relevant experiments
+8. Recent entries in `decisions/decision-log.md`
+9. Recent performance review under `performance/`
+10. Current live Meta Ads data
 
 ## Operating model
 
@@ -35,7 +44,11 @@ Meta Ads = live campaigns + live delivery + live performance
 ChatGPT = analysis + planning + comparison + execution support
 ```
 
-Any meaningful change to strategy, campaign structure, budget rules, targeting logic, creative direction, or success criteria should be recorded here.
+## Brand isolation rule
+
+Every campaign, experiment, creative concept, KPI review, and recommendation must identify its brand.
+
+Do not combine Magasin Coffee and Magasin Cup performance into one decision unless the user explicitly asks for an account-level view.
 
 ## Repository structure
 
@@ -44,6 +57,9 @@ Any meaningful change to strategy, campaign structure, budget rules, targeting l
 ├── README.md
 ├── SOURCE_OF_TRUTH.md
 ├── CURRENT_STATE.md
+├── brands/
+│   ├── magasin-coffee/
+│   └── magasin-cup/
 ├── strategy/
 ├── campaigns/
 │   ├── planned/
